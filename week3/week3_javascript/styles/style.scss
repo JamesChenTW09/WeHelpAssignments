@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+body {
+  overflow-x: hidden;
+}
+//漢堡圖案先隱藏
+header div img {
+  display: none;
+}
+//標籤和導覽列
+header {
+  margin: 0.5rem;
+  display: flex;
+  align-items: center;
+  div {
+    flex: none;
+    width: 50%;
+    ul {
+      display: flex;
+      list-style-type: none;
+      justify-content: flex-end;
+      li {
+        padding: 1rem;
+      }
+    }
+  }
+}
+//中間 welcome to myhome
+section.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: lightblue;
+  height: 300px;
+  p {
+    font-size: 40px;
+    font-weight: bold;
+  }
+}
+//圖片和文字
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  div {
+    padding: 3px;
+    img {
+      width: 290px;
+      height: 201px;
+    }
+    p {
+      width: 290px;
+      height: 3.2rem;
+      text-align: center;
+      background-color: lightblue;
+      margin-top: -5px;
+      padding: 0.5rem;
+    }
+  }
+}
+//600px ~ 1200px RWD設定
+@media (max-width: 1200px) {
+  main {
+    width: 100%;
+    div {
+      margin-top: 1.5rem;
+      width: 45%;
+      margin-bottom: -2rem;
+      img {
+        width: 100%;
+        height: 70%;
+      }
+      p {
+        width: 100%;
+        height: 3.2rem;
+      }
+    }
+  }
+}
+//0px ~ 600px RWD設定
+@media (max-width: 600px) {
+  main div {
+    width: 90%;
+    margin: 0.1rem 0;
+
+    img {
+      width: 100%;
+      height: 70%;
+    }
+    p {
+      width: 100%;
+      height: 3rem;
+    }
+  }
+  header {
+    margin: 1.2rem 0 1.1rem 0.5rem;
+    div.nav {
+      display: flex;
+      justify-content: flex-end;
+      ul {
+        display: none;
+      }
+      img {
+        display: inherit;
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+}
+//底部button設定
+.wrap_btn {
+  height: 7rem;
+  .btn {
+    margin: 3rem auto 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
