@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+//背景圖案
+img {
+  width: 100%;
+  opacity: 0.8;
+  position: absolute;
+  z-index: -5;
+}
+
+//首頁登入系統
+div {
+  box-shadow: 3px 3px 2px rgba(123, 123, 252, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.63);
+  height: 30rem;
+  width: 25rem;
+  margin: 4rem auto 0 auto;
+  h1 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 4rem;
+  }
+  form {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      color: white;
+      text-align: center;
+    }
+    input {
+      font-size: 1rem;
+      background-color: transparent;
+      border: 1px solid white;
+      border-radius: 15px;
+      padding: 0.6rem 0.2rem;
+      margin: 1.2rem 1.2rem;
+      color: white;
+    }
+  }
+}
+//placeholder設定顏色
+::placeholder {
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+}
+//登入input的設定
+input.typing:focus,
+input.typing:hover {
+  background-color: rgba(212, 211, 211, 0.2);
+}
+input.submit:hover {
+  background-color: rgba(212, 211, 211, 0.4);
+}
+//以上為首頁設定
+
+.success_p {
+  text-align: center;
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+//成功登入頁面的登出按鍵
+a.successLogOut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+}
+a.successLogOut:hover {
+  color: rgb(138, 136, 136);
+}
+
+//RWD設定
+@media (max-width: 850px) {
+  body {
+    height: 100vh;
+  }
+  img {
+    aspect-ratio: 12/16;
+  }
+}
+@media (max-width: 420px) {
+  div {
+    width: 21rem;
+    h1 {
+      font-size: 1.7rem;
+    }
+  }
+}
