@@ -6,7 +6,7 @@ app.secret_key="any string but secret"
 @app.route("/")
 def home():
     checkStatus = session.get("status")
-    if checkStatus == "ON":  #設定1為有登入
+    if checkStatus == "ON":  #設定ON為有登入
         return redirect("/member")  #有登入紀錄的話返回會員頁面
     return render_template("base.html")  #沒有登入紀錄的話就到登入首頁
 
