@@ -1,61 +1,41 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 img {
   width: 100%;
-  opacity: 0.8;
+  opacity: 0.75;
   position: absolute;
   z-index: -5;
 }
 
 div {
-  -webkit-box-shadow: 3px 3px 2px rgba(123, 123, 252, 0.3);
-          box-shadow: 3px 3px 2px rgba(123, 123, 252, 0.3);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 3px 3px 2px rgba(123, 123, 252, 0.3);
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.63);
   height: 30rem;
   width: 25rem;
   margin: 4rem auto 0 auto;
 }
-
 div h1 {
   font-size: 1.8rem;
   color: white;
   margin-bottom: 4rem;
 }
-
 div form {
   border: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 div form h2 {
   color: white;
   text-align: center;
 }
-
 div form input {
   font-size: 1rem;
   background-color: transparent;
@@ -66,19 +46,13 @@ div form input {
   color: white;
 }
 
-::-webkit-input-placeholder {
+::-moz-placeholder {
   color: white;
   text-align: center;
   font-size: 0.8rem;
 }
 
 :-ms-input-placeholder {
-  color: white;
-  text-align: center;
-  font-size: 0.8rem;
-}
-
-::-ms-input-placeholder {
   color: white;
   text-align: center;
   font-size: 0.8rem;
@@ -107,20 +81,24 @@ input.submit:hover {
 }
 
 a.successLogOut {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
-a.successLogOut:hover {
+a.failBack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 5rem;
+}
+
+a.successLogOut:hover,
+a.failBack:hover {
   color: #8a8888;
 }
 
@@ -128,11 +106,11 @@ a.successLogOut:hover {
   body {
     height: 100vh;
   }
+
   img {
     aspect-ratio: 12/16;
   }
 }
-
 @media (max-width: 420px) {
   div {
     width: 21rem;
@@ -140,5 +118,4 @@ a.successLogOut:hover {
   div h1 {
     font-size: 1.7rem;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

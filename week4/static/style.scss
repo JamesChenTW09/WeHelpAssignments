@@ -6,7 +6,7 @@
 //背景圖案
 img {
   width: 100%;
-  opacity: 0.8;
+  opacity: 0.75;
   position: absolute;
   z-index: -5;
 }
@@ -74,9 +74,18 @@ a.successLogOut {
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
-a.successLogOut:hover {
+a.failBack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 5rem;
+}
+a.successLogOut:hover,
+a.failBack:hover {
   color: rgb(138, 136, 136);
 }
 
