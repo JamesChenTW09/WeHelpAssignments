@@ -33,7 +33,8 @@ def error():
 #成功登入頁面
 @app.route("/member")
 def member():
-    if session.get("status") == "OFF":  
+    print(session.get("status"))
+    if session.get("status") == "OFF" or session.get("status") == None:  
         return redirect("/")
     return render_template("success.html")
 
