@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('logIn.static', filename='style.css')}}"
+    />
+    <title>登入成功</title>
+  </head>
+  <body>
+    <div>
+      <img
+        src="{{url_for('logIn.static',
+    filename='P_20181005_105721_vHDR_On_HP.jpg')}}"
+        alt="背景圖案"
+      />
+      <h1>恭喜{{ userID }}，成功登入系統</h1>
+      <a class="successLogOut" href="/logOut">登出系統</a>
+    </div>
+  </body>
+</html>
