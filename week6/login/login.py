@@ -76,6 +76,7 @@ def logOut():
     return redirect("/")
 
 
+
 #註冊
 @logIn.route("/signup", methods=["POST"])
 def signUp(): 
@@ -94,26 +95,24 @@ def signUp():
 
     #檢查資料庫是否有相同的username，有的話導入失敗頁面
     if registerName and registerAccount and registerPassword:
-        cursor.execute("SELECT `username` FROM `member`;")
-        allUsername = cursor.fetchall()
-        for name in allUsername:
-            if registerAccount in name:
-                cursor.close()
-                myDB.close() 
-                return redirect("/error/?message=帳號已被註冊")
-        else:
+        cursor.execute("SELECT * FROM `member` WHERE `username` = %s",[registerAccount])
+        matchUsername = cursor.fetchone()
+        if matchUsername == None:
              #如果都有資料，且未重複username，在資料庫新增一筆資料，並導回登入頁面
             cursor.execute("INSERT INTO `member`(`name`,`username`,`password`) VALUES(%s,%s,%s)",[registerName,registerAccount,registerPassword])
             myDB.commit()         
             cursor.close()
             myDB.close() 
             return render_template("base.html")
-            
+        else:
+            cursor.close()
+            myDB.close() 
+            return redirect("/error/?message=帳號已被註冊")
+      
     #如果有一項未填，導入失敗頁面
     else :      
         cursor.close()
         myDB.close()
         return redirect("/error/?message=資料未填寫完全")  
         
-
 
