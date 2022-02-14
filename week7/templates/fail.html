@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('logIn.static', filename='style.css')}}"
+    />
+    "
+    <title>登入失敗</title>
+  </head>
+  <body>
+    <div>
+      <img
+        src="{{url_for('logIn.static',
+      filename='P_20181005_105721_vHDR_On_HP.jpg')}}"
+        alt="背景圖案"
+      />
+      <h1>失敗頁面</h1>
+      <h2 class="success_p">{{result}}</h2>
+      <a class="failBack" href="/">返回上頁</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="UTF-8>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('logIn.static', filename='style.css')}}">
+
+    <title>首頁</title>
+</head>
+<body>
+<div>
+    <img
+    src="{{url_for('logIn.static',
+  filename='P_20181005_105721_vHDR_On_HP.jpg')}}"
+    alt="背景圖案"
+  />
+    <h1>歡迎光臨，請輸入帳號密碼</h1>
+    <form class="firstForm" action="/signup" method="post">
+        <h2>註冊帳號</h2>
+        <input class="typing"  type="text" placeholder="姓名" name="registerName">
+        <input class="typing"  type="text" placeholder="帳號" name="registerAccount">
+        <input class="typing"  type="password" placeholder="密碼" name="registerPassword">
+        <input class="submit" type="submit" value="註冊" style="cursor:pointer">
+    </form>
+
+    <form action="/signin" method="post">
+        <h2>登入系統</h2>
+        <input class="typing" type="text" id="account" name="account" placeholder="請輸入帳號">
+        <input class="typing" type="password" id="password" name="password" placeholder="請輸入密碼">
+        <input class="submit" type="submit" value="登入" style="cursor: pointer">
+    </form>
+</div>
+</body>
+</html>

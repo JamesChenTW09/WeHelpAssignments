@@ -1,0 +1,174 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  opacity: 0.75;
+  position: absolute;
+  z-index: -5;
+}
+
+div {
+  box-shadow: 3px 3px 2px rgba(123, 123, 252, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.63);
+  height: 35rem;
+  width: 25rem;
+  margin: 2.5rem auto 0 auto;
+}
+div h1 {
+  font-size: 1.4rem;
+  color: white;
+  margin-top: 1rem;
+}
+div input {
+  padding: 5px 10px;
+  margin: 10px 0px;
+}
+div p {
+  font-size: 20px;
+  color: white;
+  font-weight: bolder;
+  margin-top: 10px;
+  height: 25px;
+}
+div button {
+  border: 1px solid lightgray;
+  padding: 5px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 5px;
+  border-radius: 10px;
+  background: transparent;
+  color: white;
+}
+div button:hover {
+  background-color: rgba(211, 211, 211, 0.5);
+}
+div form {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+div form h2 {
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+}
+div form input {
+  font-size: 0.7rem;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 0.6rem 0.2rem;
+  margin: 0.6rem 0.6rem;
+  color: white;
+}
+
+::-moz-placeholder {
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+:-ms-input-placeholder {
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+::placeholder {
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+input.typing:focus,
+input.typing:hover {
+  background-color: rgba(212, 211, 211, 0.2);
+}
+
+input.submit:hover {
+  background-color: rgba(212, 211, 211, 0.4);
+}
+
+.success_p {
+  text-align: center;
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+
+a.successLogOut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  margin: 15px 0px;
+}
+
+a.failBack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 5rem;
+}
+
+.successInput,
+.successUpdate {
+  font-size: 0.7rem;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 0.6rem 0.2rem;
+  margin: 0.6rem 0.6rem;
+  color: white;
+}
+
+a.successLogOut:hover,
+a.failBack:hover {
+  color: #8a8888;
+}
+
+form.firstForm::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: white;
+  margin: 5px 0px;
+}
+
+.successH1::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: white;
+  margin: 5px 0px;
+}
+
+@media (max-width: 850px) {
+  body {
+    height: 100vh;
+  }
+
+  img {
+    aspect-ratio: 12/16;
+  }
+}
+@media (max-width: 420px) {
+  div {
+    width: 21rem;
+  }
+  div h1 {
+    font-size: 1.7rem;
+  }
+}/*# sourceMappingURL=style.css.map */
