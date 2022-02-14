@@ -13,7 +13,7 @@ button[0].addEventListener("click", () => {
     })
     .then((jsonData) => {
       //如果返回值為null，代表資料庫無此資料
-      if (jsonData.data === "null") {
+      if (jsonData.data === null) {
         myP[0].innerText = "無資料";
       } else {
         let { name, username } = jsonData.data;
@@ -37,16 +37,19 @@ button[1].addEventListener("click", () => {
     },
   })
     .then((response) => {
-      console.log(response);
       return response.json();
     })
     .then((response) => {
-      if (response.ok === "true") {
+      const { ok, title, error } = response;
+      if (ok === true) {
         myP[1].innerText = "更新成功";
-      } else if (response.title === "請輸入姓名") {
+      } else if (title === "請輸入姓名") {
         myP[1].innerText = response.title;
-      } else if (response.error === "true") {
+      } else if (error === true) {
         myP[1].innerText = "請先登入";
       }
+    })
+    .catch((error) => {
+      console.log("連線有誤 " + error);
     });
 });
